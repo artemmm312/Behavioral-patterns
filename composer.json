@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Command\\": "Command/",
+            "Receiver\\": "Receiver/",
+            "Invoker\\": "Invoker"
+        }
+    },
+    "authors": [
+        {
+            "name": "artemmm312",
+            "email": "artemmm312@gmail.com"
+        }
+    ],
+    "require": {}
+}
