@@ -1,38 +1,5 @@
 <?php
 
-/* class MyIterator implements Iterator
-{
-	private $collection;
-	private $position = 0;
-
-	public function __construct($collection)
-	{
-		$this->collection = $collection;
-	}
-
-	public current(): mixed
-	{
-
-	}
-public function key(): mixed
-{
-
-}
-public function next(): void
-{
-
-}
-public function rewind(): void
-{
-
-}
-public function valid(): bool
-{
-
-}
-} */
-
-
 class Iterator1 implements Iterator
 {
 
