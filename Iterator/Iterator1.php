@@ -2,34 +2,29 @@
 
 namespace MyIterator;
 use Iterator;
+use Collection\Collection1;
 
 class Iterator1 implements Iterator
 {
 
-	protected $collection;
-	protected $position = 0;
-	protected $reverse = false;
+	protected Collection1 $collection;
+	protected int $position = 0;
+	protected bool $reverse = false;
 
-	public function __construct($collection, $reverse = false)
+	public function __construct(Collection1 $collection, bool $reverse = false)
 	{
 		$this->collection = $collection;
 		$this->reverse = $reverse;
 	}
 
-	//Возвращает итератор на первый элемент.
-	public function rewind(): void
-	{
-		$this->position = $this->reverse ? count($this->collection->getItems()) - 1 : 0;
-	}
-
 	//Возврат текущего элемента.
-	public function current()
+	public function current(): mixed
 	{
 		return $this->collection->getItems()[$this->position];
 	}
 
 	//Возвращает ключ текущего элемента.
-	public function key()
+	public function key(): mixed
 	{
 		return $this->position;
 	}
@@ -38,6 +33,12 @@ class Iterator1 implements Iterator
 	public function next(): void
 	{
 		$this->position = $this->position + ($this->reverse ? -1 : 1);
+	}
+
+	//Возвращает итератор на первый элемент.
+	public function rewind(): void
+	{
+		$this->position = $this->reverse ? count($this->collection->getItems()) - 1 : 0;
 	}
 
 	//Проверяет корректность текущей позиции.

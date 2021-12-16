@@ -7,14 +7,14 @@ use Traversable;
 
 class Collection1 implements IteratorAggregate
 {
-	private $items = [];
+	private array $items = [];
 
-	public function getItems()
+	public function getItems(): array
 	{
 		return $this->items;
 	}
 
-	public function addItem($item)
+	public function addItem(string $item): void
 	{
 		$this->items[] = $item;
 	}
