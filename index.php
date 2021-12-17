@@ -19,16 +19,15 @@ class concreteMediator implements Mediator
 		$this->component2->setMediator($this);
 	}
 
-public function notify(object $sender, array $arr): void
-{
-	$this->component1->output($this->component2->operation($arr));
-}
-
+	public function notify(object $sender, array $arr): void
+	{
+		$this->component1->output($this->component2->operation($arr));
+	}
 }
 
 class BaseComponent
 {
-	protected $mediator;
+	protected Mediator|null $mediator;
 
 	public function __construct(Mediator $mediator = null)
 	{
@@ -43,19 +42,18 @@ class BaseComponent
 
 class Component1 extends BaseComponent
 {
-	public function input($a, $b): void
+	public function input(int $a, int $b): void
 	{
 		echo "Передаем данные ($a и $b) на сервер.<br>";
-		$arr[] = $a; $arr[]= $b;
+		$arr[] = $a;
+		$arr[] = $b;
 		$this->mediator->notify($this, $arr);
-		//return $arr;
 	}
 
-	public function output(int $c): void
+	public function output(int $result): void
 	{
-		echo "Результат сложения равен $c.";
+		echo "Результат сложения равен $result.";
 	}
-
 }
 
 class Component2 extends BaseComponent
@@ -63,9 +61,10 @@ class Component2 extends BaseComponent
 	public function operation(array $arr)
 	{
 		echo "Обработка данных...<br>";
-		$a = $arr[0]; $b = $arr[1];
-		$c = $a + $b;
-		return $c;
+		$a = $arr[0];
+		$b = $arr[1];
+		$result = $a + $b;
+		return $result;
 	}
 }
 
@@ -76,4 +75,3 @@ $c2 = new Component2();
 $mediator = new concreteMediator($c1, $c2);
 
 $c1->input(5, 10);
-
