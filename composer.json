@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Mediator\\": "Mediator/",
+            "Component\\": "Component"
+        }
+    },
+    "authors": [
+        {
+            "name": "artemmm312",
+            "email": "artemmm312@gmail.com"
+        }
+    ],
+    "require": {}
+}
