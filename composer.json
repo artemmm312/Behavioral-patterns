@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Memento\\": "Memento/",
+            "Caretaker\\": "Caretaker/",
+            "Originator\\": "Originator/"
+        }
+    },
+    "authors": [
+        {
+            "name": "artemmm312",
+            "email": "artemmm312@gmail.com"
+        }
+    ],
+    "require": {}
+}
