@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Template\\": "Template/"
+        }
+    },
+    "authors": [
+        {
+            "name": "artemmm312",
+            "email": "artemmm312@gmail.com"
+        }
+    ],
+    "require": {}
+}
