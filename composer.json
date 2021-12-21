@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Strategy\\": "Strategy/",
+            "Context\\": "Context/"
+        }
+    },
+    "authors": [
+        {
+            "name": "artemmm312",
+            "email": "artemmm312@gmail.com"
+        }
+    ],
+    "require": {}
+}
