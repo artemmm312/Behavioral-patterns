@@ -6,7 +6,7 @@ use Context\Context;
 
 abstract class State
 {
-	protected $context;
+	protected Context $context;
 
 	public function setContext(Context $context)
 	{
