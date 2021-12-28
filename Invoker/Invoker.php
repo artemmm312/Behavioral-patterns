@@ -6,12 +6,12 @@ use Command\Command;
 
 class Invoker
 {
-	private Command $command1;
-	private Command $command2;
+	private $command1;
+	private $command2;
 
 	public function com1(Command $command): void
 	{
-		$this->commmand1 = $command;
+		$this->command1 = $command;
 	}
 
 	public function com2(Command $command): void
@@ -25,7 +25,7 @@ class Invoker
 			$this->command1->execute();
 		}
 
-		if ($this->commmand2 instanceof Command) {
+		if ($this->command2 instanceof Command) {
 			$this->command2->execute();
 		}
 	}
