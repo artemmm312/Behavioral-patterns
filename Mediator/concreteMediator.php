@@ -2,7 +2,7 @@
 
 namespace Mediator;
 
-use Component\Component1, Component\Component2;
+use Component\BaseComponent, Component\Component1, Component\Component2;
 
 class concreteMediator implements Mediator
 {
@@ -17,7 +17,7 @@ class concreteMediator implements Mediator
 		$this->component2->setMediator($this);
 	}
 
-	public function notify(object $sender, array $arr): void
+	public function notify(BaseComponent $sender, array $arr): void
 	{
 		$this->component1->output($this->component2->operation($arr));
 	}

@@ -2,7 +2,9 @@
 
 namespace Mediator;
 
+use Component\BaseComponent;
+
 interface Mediator
 {
-	public function notify(object $sender, array $arr): void;
+	public function notify(BaseComponent $sender, array $arr): void;
 }

@@ -9,8 +9,8 @@ use Mediator\concreteMediator;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$c1 = new Component1();
-$c2 = new Component2();
-$mediator = new concreteMediator($c1, $c2);
+$com1 = new Component1();
+$com2 = new Component2();
+$mediator = new concreteMediator($com1, $com2);
 
-$c1->input(5, 10);
+$com1->input(5, 10);
