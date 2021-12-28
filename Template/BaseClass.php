@@ -28,7 +28,7 @@ abstract class BaseClass
 
 	protected function baseOperation3(): void
 	{
-		echo "Но все равно базовый класс деолает основную работу\n";
+		echo "Но все равно базовый класс делает основную работу\n";
 	}
 
 	abstract protected function requiredOperations1(): void;
