@@ -11,7 +11,7 @@ use Invoker\Invoker;
 require __DIR__ . '/vendor/autoload.php';
 
 $invoker = new Invoker();
-$invoker->com1(new Command1("Здрасьте=)"));
+$invoker->com1(new Command1("Что-то важное"));
 $receiver = new Receiver();
 $invoker->com2(new Command2($receiver, 15, 20));
 

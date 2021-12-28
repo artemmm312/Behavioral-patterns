@@ -20,7 +20,7 @@ class Command2 implements Command
 
 	public function execute(): void
 	{
-		echo "Передаю на выполнение в приёмник.<br>";
+		echo "Команда2 передает управление в приемник.<br>";
 		$this->receiver->calculations($this->a, $this->b);
 	}
 }

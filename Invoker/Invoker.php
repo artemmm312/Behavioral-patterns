@@ -6,8 +6,8 @@ use Command\Command;
 
 class Invoker
 {
-	private $command1;
-	private $command2;
+	private mixed $command1;
+	private mixed $command2;
 
 	public function com1(Command $command): void
 	{
